@@ -19,7 +19,7 @@
 
 - name: collect Debian and Ubuntu specific TinyPilot required apt packages
   set_fact:
-    tinypilot_packages: "{{ tinypilot_packages }} + ['python-pip']"
+    tinypilot_packages: "{{ tinypilot_packages }} + ['python3-pip']"
   when: ansible_distribution == 'Debian' or (ansible_distribution == 'Ubuntu' and ansible_distribution_version != '20.04')
 
 - name: collect Ubuntu 20.04 specific TinyPilot required apt packages
